@@ -16,7 +16,7 @@ app.post('/', async (req, res) => {
     // For this example, we'll use static data.
     const newRow = {
       client_id: 12345,
-      fecha: new Date().toISOString(), // Use ISO string for TIMESTAMP or DATETIME
+      fecha: new Date().toISOString().slice(0, 10), // "YYYY-MM-DD"
       estado: 'activo'
     };
 
