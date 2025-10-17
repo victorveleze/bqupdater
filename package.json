@@ -7,9 +7,11 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@google-cloud/bigquery": "^8.1.1"
+    "@google-cloud/bigquery": "^8.1.1",
+    "express": "^5.1.0"
   }
 }
