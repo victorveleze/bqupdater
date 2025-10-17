@@ -7,8 +7,8 @@ const app = express();
 const bigquery = new BigQuery();
 
 // Define your BigQuery dataset and table
-const datasetId = 'YOUR_DATASET_ID'; // e.g., 'my_dataset'
-const tableId = 'YOUR_TABLE_ID';     // e.g., 'client_activity'
+const datasetId = 'Servinet'; // e.g., 'my_dataset'
+const tableId = 'client_daily_state';     // e.g., 'client_activity'
 
 app.post('/', async (req, res) => {
   try {
