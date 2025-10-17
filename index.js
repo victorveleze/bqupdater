@@ -17,7 +17,7 @@ app.post('/', async (req, res) => {
     const newRow = {
       client_id: 12345,
       date: new Date().toISOString().slice(0, 10), // "YYYY-MM-DD"
-      status: 'activo'
+      state: 'activo'
     };
 
     // Insert the row into the BigQuery table
