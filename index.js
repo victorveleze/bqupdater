@@ -4,9 +4,7 @@ const { BigQuery } = require('@google-cloud/bigquery');
 
 // Initialize Express and BigQuery client
 const app = express();
-const bigquery = new BigQuery({
-  projectId: 'servigestion-475416'
-});
+const bigquery = new BigQuery();
 
 // Define your BigQuery dataset and table
 const datasetId = 'Servinet'; // e.g., 'my_dataset'
