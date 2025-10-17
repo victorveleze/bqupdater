@@ -40,7 +40,7 @@ app.post('/', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello from Cloud Run!');
+  res.send('Hello from Victor Cloud Run!');
 });
 
 // Cloud Run provides PORT via env var
