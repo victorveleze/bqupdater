@@ -30,12 +30,18 @@ app.post('/', async (req, res) => {
     res.status(200).send('Data added to BigQuery successfully!');
 
   } catch (error) {
-    console.error('ERROR:', error);
-    // Check for insert errors
-    if (error.name === 'PartialFailureError') {
-      console.error('Insert Errors:', error.errors);
-    }
-    res.status(500).send('Failed to insert data.');
+  console.error('ERROR:', error);
+
+  let errorMessage = 'Failed to insert data.';
+  
+  // Include BigQuery insert errors if present
+  if (error.name === 'PartialFailureError') {
+    errorMessage += ' ' + JSON.stringify(error.errors);
+  } else {
+    errorMessage += ' ' + error.message;
+  }
+
+  res.status(500).send(errorMessage);
   }
 });
 
